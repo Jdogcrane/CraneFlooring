@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <!--Import Font-awesome.css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <!--Import materialize Icons-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <!--Import materialize.css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!--Import Animate.css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!--Import Google Icon Font-->
+ 
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <title>Joshua Crane | Portfolio</title>
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <title></title>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+
+  <div id="root"></div>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+
+  // Allows nav bar to slide in and out depending on direction user moves in
+  var prevScrollpos = window.pageYOffset;
+  window.onscroll = function () {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      document.getElementById("navbar").style.top = "0";
+    } else {
+      document.getElementById("navbar").style.top = "-5rem";
+    }
+    prevScrollpos = currentScrollPos;
+  }
+
+</script>
+
+<script>
+
+  //update this with your js_form selector
+  var form_id_js = "javascript_form";
+
+  var data_js = {
+    "access_token": "bk8raefysb3goulgfn2kmbs7"
+  };
+  var sendButton = document.getElementById("js_send");
+
+  function js_onSuccess() {
+    // Makes button display Sent
+    sendButton.value = 'Sent';
+    // Disables button
+    sendButton.disabled = true;
+    // wait 1 second then reload page
+    setTimeout(() => { location.reload(); }, 1000);
+  }
+
+  function js_onError(error) {
+    // remove this to avoid redirect
+    sendButton.value = 'Error: Failed to send';
+    sendButton.disabled = true;
+    setTimeout(() => { location.reload(); }, 2000);
+  }
+
+
+  function js_send() {
+    sendButton.value = 'Sending…';
+    sendButton.disabled = true;
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function () {
+      if (request.readyState == 4 && request.status == 200) {
+        js_onSuccess();
+      } else
+        if (request.readyState == 4) {
+          js_onError(request.response);
+        }
+    };
+
+    var subject = document.querySelector("#" + form_id_js + " [name='subject']").value;
+    var message = document.querySelector("#" + form_id_js + " [name='text']").value;
+    data_js['subject'] = subject;
+    data_js['text'] = message;
+    var params = toParams(data_js);
+
+    request.open("POST", "https://postmail.invotes.com/send", true);
+    request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+    request.send(params);
+
+    return false;
+  }
+
+  sendButton.onclick = js_send;
+
+  function toParams(data_js) {
+    var form_data = [];
+    for (var key in data_js) {
+      form_data.push(encodeURIComponent(key) + "=" + encodeURIComponent(data_js[key]));
+    }
+
+    return form_data.join("&");
+  }
+
+  var js_form = document.getElementById(form_id_js);
+  js_form.addEventListener("submit", function (e) {
+    e.preventDefault();
+  });
+</script>
+
+</html>
