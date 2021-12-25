@@ -9,7 +9,6 @@ body {
     background-color: #f9fcff;
     background-image: linear-gradient(160deg, #3b3b3b 0%, #dee4ea 74%);
     text-align: unset;
-    font-weight: lighter;
     scroll-behavior: smooth;
     transition: 200ms;
 }
@@ -32,11 +31,11 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 100px;
-    height: 110rem;
+    height: 180rem;
 }
 
 #parallax-3 {
-    background: url(https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
+    background: #ffffff;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -61,7 +60,7 @@ body {
 }
 
 .titleBig {
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     font-weight: 500;
     font-style: normal;
     font-size: 1rem;
@@ -69,16 +68,19 @@ body {
     text-transform: uppercase;
 }
 
+.big-text {
+    font-size: 1.5rem;
+}
+
 .caption {
-    background-color: rgba(0, 0, 0, 0.63);
-    border-radius: 20px;
-    max-width: 500px;
+    font-size: 1.3rem;
+
 }
 
 .background-color {
-    background: rgba(0, 0, 0, 0.25);
-    box-shadow: rgba(0, 0, 0, 0.4) 0rem 0rem 10px;
-
+    text-shadow: rgb(0, 0, 0) 1px 3px 5px;
+    text-decoration-color: black;
+    text-decoration: solid black 3px;
 }
 
 .collapsible {
@@ -98,14 +100,16 @@ body {
     height: 20rem;
 }
 
-.nav ul a:active {}
+/* .nav ul a:active {
+    
+} */
 
 .invisible {
     visibility: hidden;
 }
 
 nav a {
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     font-weight: 500;
     font-style: normal;
     font-size: 1rem;
@@ -114,7 +118,7 @@ nav a {
 }
 
 .nav ul a {
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     font-weight: 500;
     font-style: normal;
     font-size: 1rem;
@@ -123,12 +127,12 @@ nav a {
 }
 
 nav ul a:hover {
-    color: #ff9800;
+    color: #ff6c45;
     background: none !important;
 }
 
 .nav {
-    background: none;
+    background: white;
 }
 
 nav {
@@ -160,7 +164,7 @@ nav {
 }
 
 .btn-floating {
-    background-color: rgba(0, 0, 0, 0.308);
+    background-color: transparent;
     border-radius: 4px;
     min-width: 40px;
     max-height: 100px;
@@ -171,14 +175,20 @@ nav {
     border-bottom: rgb(53, 53, 53) solid 1px;
 }
 
+button:focus {
+    outline: none;
+    background: white;
+}
+
 
 .btn-custom {
+    background: white;
     padding: 1rem;
     border: solid #ff6c45 2px;
     font-size: 1rem;
     font-weight: bold;
     color: #ff6c45;
-    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-transform: uppercase;
     letter-spacing: .1em;
 }
@@ -208,8 +218,8 @@ nav {
 
 .normalText {
     font-size: 1.3rem;
-    font-family: inherit;
-    font-weight: lighter;
+    font-family: Arial;
+    color: rgba(40, 26, 23, .6)
 }
 
 .normalTextUnique {
@@ -222,10 +232,20 @@ p {
     margin: 0px;
 }
 
+.greyText {
+    color: rgba(40, 26, 23, .8);
+    font-size: 15px;
+    letter-spacing: .1em;
+    line-height: 1em;
+    text-transform: uppercase;
+}
+
+.grey {
+    color: rgba(40,26,23,.6)
+}
 
 
-
-strong {
+.strong {
     font-weight: bold;
 }
 
@@ -262,7 +282,21 @@ h2 {
 
 .contain1 {
     margin: 0 auto;
-    max-width: 800px;
+    max-width: 888px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.contain2 {
+    margin: 0 auto;
+    max-width: 400px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.contain {
+    margin: 0 auto;
+    max-width: 66%;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
 }
@@ -299,7 +333,7 @@ h2 {
 
 .sidenav {
     background: rgb(255, 255, 255);
-    border: solid rgba(207, 207, 207, 0.24) 1px;
+    border: solid rgb(207, 207, 207) 1px;
     border-left: none;
     border-top: none;
 }
@@ -649,6 +683,16 @@ textarea:focus-visible {
     background-image: linear-gradient(315deg, #6e6e6e8a 0%, #64646488 74%);
 }
 
+.iframeStyling {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    border: none
+}
+
+.scheduleVis {
+    visibility: hidden;
+}
 
 @media only screen and (max-width: 994px) {
     .titleBig {
@@ -664,11 +708,11 @@ textarea:focus-visible {
     }
 
     #parallax-3 {
-        height: 70rem;
+        height: 150rem;
     }
 
     #parallax-2 {
-        height: 115rem !important;
+        height: 270rem !important;
     }
 
     textarea {
