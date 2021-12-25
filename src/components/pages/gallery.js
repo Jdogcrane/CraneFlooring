@@ -1,15 +1,19 @@
 import React from 'react';
-import '../../Styles/Projects.css';
+import '../../Styles/gallery.css';
 import { Row, Col } from 'react-materialize';
-export default function Projects() {
+export default function Gallery() {
   return (
 
     <>
       <section id="parallax-header" className="outer-pro1">
 
+      <div className="center">
+
+</div>
+
         <Row className=" space container ">
           <Col
-            className=" white-text animate__animated  animate__delay-3s animate__fadeIn title center"
+            className="black-text animate__animated  animate__delay-3s animate__fadeIn title center"
             s={12}
             m={12}
             l={12}
@@ -18,7 +22,7 @@ export default function Projects() {
 
           </Col>
           <Col
-            className=" white-text animate__animated  animate__delay-3s animate__fadeIn normalText center spaceSmall"
+            className="black-text animate__animated  animate__delay-3s animate__fadeIn normalText center spaceSmall"
             s={12}
             m={12}
             l={12}
@@ -40,7 +44,7 @@ export default function Projects() {
 
         <Row className="animate__animated animate__fadeIn animate__delay-3s  container">
           <Col
-            className=" white-text "
+            className="black-text "
             s={12}
             m={6}
             l={6}
@@ -67,7 +71,7 @@ export default function Projects() {
                 </div>
                 <div className="spaceSmall">
                   <div className=" center normalText">
-                    <a href="https://github.com/Jdogcrane/covid-and-cats" target="__blank" className="link borderRoundG spacing2 animate__fadeInUpBig">Repository <i class="fab white-text fa-github"></i></a>
+                    <a href="https://github.com/Jdogcrane/covid-and-cats" target="__blank" className="link borderRoundG spacing2 animate__fadeInUpBig">Repository <i class="fabblack-text fa-github"></i></a>
                     <a href="https://jdogcrane.github.io/covid-and-cats/" target="__blank" className="link borderRoundG spacing2 animate__fadeInUpBig">Live Demo <i class="fas orange-text fa-play-circle"></i></a>
                   </div>
 
@@ -76,7 +80,7 @@ export default function Projects() {
             </div>
           </Col>
           <Col
-            className=" white-text "
+            className="black-text "
             s={12}
             m={6}
             l={6}
@@ -100,7 +104,7 @@ export default function Projects() {
 
         <Row className="animate__animated animate__fadeIn animate__delay-3s space container">
           <Col
-            className=" white-text "
+            className="black-text "
             s={12}
             m={6}
             l={6}
@@ -118,7 +122,7 @@ export default function Projects() {
             </div>
           </Col>
           <Col
-            className=" white-text "
+            className="black-text "
             s={12}
             m={6}
             l={6}
@@ -149,7 +153,7 @@ export default function Projects() {
                 </div>
                 <div className="spaceSmall">
                   <div className=" center normalText">
-                    <a href="https://github.com/huirayj/forum-friends" target="__blank" className="link borderRoundG spacing2 animate__fadeInUpBig">Repository <i class="fab white-text fa-github"></i></a>
+                    <a href="https://github.com/huirayj/forum-friends" target="__blank" className="link borderRoundG spacing2 animate__fadeInUpBig">Repository <i class="fabblack-text fa-github"></i></a>
 
 
                     <a href="https://forum-friends.herokuapp.com/" target="__blank" className="link borderRoundG spacing2 animate__fadeInUpBig">Live Demo <i class="fas orange-text fa-play-circle"></i></a>
@@ -168,7 +172,7 @@ export default function Projects() {
         <Row className="animate__animated animate__fadeIn animate__delay-3s space1 container ">
 
           <Col
-            className=" white-text "
+            className="black-text "
             s={12}
             m={6}
             l={6}
@@ -198,7 +202,7 @@ export default function Projects() {
                 </div>
                 <div className="spaceSmall">
                   <div className=" center normalText">
-                    <a href="https://github.com/morrisbianco/resume-builder" target="__blank" className="link borderRoundG spacing2 animate__fadeInUpBig">Repository <i class="fab white-text fa-github"></i></a>
+                    <a href="https://github.com/morrisbianco/resume-builder" target="__blank" className="link borderRoundG spacing2 animate__fadeInUpBig">Repository <i class="fabblack-text fa-github"></i></a>
 
 
                     <a href="https://rapid-resume.herokuapp.com/" target="__blank" className="link borderRoundG spacing2 animate__fadeInUpBig">Live Demo <i class="fas orange-text fa-play-circle"></i></a>
@@ -224,7 +228,7 @@ export default function Projects() {
           </Col>
 
           <Col
-            className=" white-text"
+            className="black-text"
             s={12}
             m={6}
             l={6}

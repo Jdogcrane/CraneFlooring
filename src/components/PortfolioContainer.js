@@ -3,7 +3,7 @@ import NavTabs from './NavTabs';
 import pageData from './pages';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Home from './pages/Home';
-import Projects from './pages/Projects';
+import Gallery from './pages/gallery';
 // import Resume from './pages/Resume';
 // import Contact from './pages/Contact';
 import Footer from './Footer';
@@ -23,7 +23,7 @@ const PortfolioContainer = () => {
     <BrowserRouter>
       <NavTabs {...data} />
       <Route path="/" exact component={Home} />
-      <Route path="/Projects" exact component={Projects} />
+      <Route path="/gallery" exact component={Gallery} />
       {/* <Route path="/Resume" exact component={Resume} /> */}
       {/* <Route path="/Contact" exact component={Contact} /> */}
       <Footer />
