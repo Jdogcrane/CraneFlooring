@@ -76,9 +76,6 @@ const NavTabs = () => {
                   {/* <li>
                     <NavLink to="/Contact" onClick={() => window.scrollTo(0, 0)} >Contact</NavLink>
                   </li> */}
-                  {/* <li>
-                    <NavLink to="/resume" onClick={() => window.scrollTo(0, 0)}>Resume</NavLink>
-                  </li> */}
                 </ul>
               </div>
             </div>

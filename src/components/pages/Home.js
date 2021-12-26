@@ -1,6 +1,6 @@
 import React from "react";
-import { Row, Col, Container } from "react-materialize";
-import { Link } from "react-scroll"
+import { Row, Col } from "react-materialize";
+// import { Link } from "react-scroll"
 import { NavLink } from "react-router-dom";
 export default function Home() {
   function myFunction() {
@@ -16,7 +16,7 @@ export default function Home() {
           <p className="invisible">Hardwood Flooring</p>
         </div>
         <div className="spaceBannerTitle ">
-          <p className="caption white-text animate__animated animate__fadeIn animate__delay-8s background-color strong">Crane Flooring — because excellence matters </p>
+          <p className="caption white-text animate__animated animate__fadeIn animate__delay-8s background-color">Crane Flooring — because excellence matters </p>
         </div>
 
       </section>
