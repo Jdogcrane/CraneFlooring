@@ -60,8 +60,8 @@ const NavTabs = () => {
           <div>
             <div className="container  animate__animated animate__backInDown animate__delay-4s">
               <div className="nav-wrapper ">
-                <Link to="https://github.com/Jdogcrane" rel="noreferrer" target="_blank" className="titleBig left">Crane Hardwood Flooring</Link>
-                <Link to="https://github.com/Jdogcrane" target="_blank" className="titleSmall">Crane Flooring</Link>
+                <Link to="/" onClick={() => window.scrollTo(0, 0)}  className="titleBig left">Crane Hardwood Flooring</Link>
+                <Link to="/" onClick={() => window.scrollTo(0, 0)} className="titleSmall">Crane Flooring</Link>
 
                 <ul className="right hide-on-med-and-down">
                   <li>

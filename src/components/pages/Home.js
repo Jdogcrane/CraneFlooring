@@ -16,7 +16,7 @@ export default function Home() {
           <p className="invisible">Hardwood Flooring</p>
         </div>
         <div className="spaceBannerTitle ">
-          <p className="caption white-text animate__animated animate__fadeIn animate__delay-8s background-color">Crane Flooring — because excellence matters </p>
+          <p className="caption white-text animate__animated animate__fadeIn animate__delay-8s background-color">Crane Flooring — <span className="italic">because excellence matters </span> </p>
         </div>
 
       </section>
