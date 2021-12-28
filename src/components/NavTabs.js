@@ -1,5 +1,5 @@
 import React from 'react';
-import { SideNav, SideNavItem } from 'react-materialize';
+import { SideNav, SideNavItem, Icon, Image } from 'react-materialize';
 import { Link, NavLink } from 'react-router-dom';
 
 const NavTabs = () => {
@@ -18,15 +18,21 @@ const NavTabs = () => {
             }}
             trigger={<i className="material-icons right black-text titleSmall" node="button">menu</i>}
           >
-            <SideNavItem
+            <SideNavItem className="black-text"
               user={{
                 background: 'https://cdn.discordapp.com/attachments/709148993262977068/924377426514034709/seamless-wood-floor-texture-hardwood-floor-texture-picture-id645858422.png',
                 email: 'Cell Phone: (757)-634-1156',
                 image: 'https://cdn.discordapp.com/attachments/709148993262977068/924377593900331018/Untitled-min.png',
                 name: 'Crane Hardwood Flooring'
               }}
+              
+              
               userView
             />
+            <SideNavItem
+     
+      image={<Image alt="test" source="https://cdn.discordapp.com/attachments/709148993262977068/924377593900331018/Untitled-min.png"></Image>}
+    ></SideNavItem>
             <SideNavItem>
               <NavLink to="/" onClick={() => window.scrollTo(0, 0)} className="black-text">Home</NavLink>
             </SideNavItem>
