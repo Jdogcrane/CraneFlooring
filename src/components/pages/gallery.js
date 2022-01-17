@@ -7,13 +7,13 @@ export default function Gallery() {
     <>
       <section id="parallax-3">
 
-      <div className="center">
+        <div className="center contain1">
 
-</div>
+        
 
-        <Row className="container">
+        <Row className="">
           <Col
-            className="black-text animate__animated  animate__delay-3s animate__fadeIn center normalText"
+            className="black-text spaceSmall animate__animated  animate__delay-3s animate__fadeIn center normalText"
             s={12}
             m={12}
             l={12}
@@ -22,7 +22,7 @@ export default function Gallery() {
 
           </Col>
           <Col
-            className="black-text animate__animated  animate__delay-3s animate__fadeIn greyText center strong title "
+            className="black-text spaceSmall animate__animated  animate__delay-3s animate__fadeIn greyText center strong title "
             s={12}
             m={12}
             l={12}
@@ -32,9 +32,9 @@ export default function Gallery() {
           </Col>
         </Row>
 
-        <Row className="space container">
+        <Row className=" ">
           <Col
-            className="black-text animate__animated animate__delay-3s animate__fadeIn greyText center "
+            className="black-text spaceSmall animate__animated animate__delay-3s animate__fadeIn greyText center "
             s={6}
             m={6}
             l={3}
@@ -43,7 +43,7 @@ export default function Gallery() {
 
           </Col>
           <Col
-            className="black-text animate__animated animate__delay-3s animate__fadeIn greyText center "
+            className="black-text spaceSmall animate__animated animate__delay-3s animate__fadeIn greyText center "
             s={6}
             m={6}
             l={3}
@@ -52,7 +52,7 @@ export default function Gallery() {
 
           </Col>
           <Col
-            className="black-text animate__animated animate__delay-3s animate__fadeIn greyText center "
+            className="black-text spaceSmall animate__animated animate__delay-3s animate__fadeIn greyText center "
             s={6}
             m={6}
             l={3}
@@ -61,46 +61,7 @@ export default function Gallery() {
 
           </Col>
           <Col
-            className="black-text animate__animated  animate__delay-3s animate__fadeIn greyText center "
-            s={6}
-            m={6}
-            l={3}
-          >
-            <img alt="placeholder" src="https://via.placeholder.com/150"></img>
-
-          </Col>
-          </Row>
-
-          <Row className=" space container  ">
-          <Col
-            className="black-text animate__animated animate__delay-3s animate__fadeIn greyText center "
-            s={6}
-            m={6}
-            l={3}
-          >
-            <img alt="placeholder" src="https://via.placeholder.com/150"></img>
-
-          </Col>
-          <Col
-            className="black-text animate__animated animate__delay-3s animate__fadeIn greyText center "
-            s={6}
-            m={6}
-            l={3}
-          >
-            <img alt="placeholder" src="https://via.placeholder.com/150"></img>
-
-          </Col>
-          <Col
-            className="black-text animate__animated animate__delay-3s animate__fadeIn greyText center "
-            s={6}
-            m={6}
-            l={3}
-          >
-            <img alt="placeholder" src="https://via.placeholder.com/150"></img>
-
-          </Col>
-          <Col
-            className="black-text animate__animated  animate__delay-3s animate__fadeIn greyText center "
+            className="black-text spaceSmall animate__animated  animate__delay-3s animate__fadeIn greyText center "
             s={6}
             m={6}
             l={3}
@@ -110,9 +71,9 @@ export default function Gallery() {
           </Col>
         </Row>
 
-        <Row className=" space container  ">
+        <Row className="    ">
           <Col
-            className="black-text animate__animated animate__delay-3s animate__fadeIn greyText center "
+            className="black-text spaceSmall animate__animated animate__delay-3s animate__fadeIn greyText center "
             s={6}
             m={6}
             l={3}
@@ -121,7 +82,7 @@ export default function Gallery() {
 
           </Col>
           <Col
-            className="black-text animate__animated animate__delay-3s animate__fadeIn greyText center "
+            className="black-text spaceSmall animate__animated animate__delay-3s animate__fadeIn greyText center "
             s={6}
             m={6}
             l={3}
@@ -130,7 +91,7 @@ export default function Gallery() {
 
           </Col>
           <Col
-            className="black-text animate__animated animate__delay-3s animate__fadeIn greyText center "
+            className="black-text spaceSmall animate__animated animate__delay-3s animate__fadeIn greyText center "
             s={6}
             m={6}
             l={3}
@@ -139,46 +100,7 @@ export default function Gallery() {
 
           </Col>
           <Col
-            className="black-text animate__animated  animate__delay-3s animate__fadeIn greyText center "
-            s={6}
-            m={6}
-            l={3}
-          >
-            <img alt="placeholder" src="https://via.placeholder.com/150"></img>
-
-          </Col>
-        </Row>
-
-        <Row className=" space container  ">
-          <Col
-            className="black-text animate__animated animate__delay-3s animate__fadeIn greyText center "
-            s={6}
-            m={6}
-            l={3}
-          >
-            <img alt="placeholder" src="https://via.placeholder.com/150"></img>
-
-          </Col>
-          <Col
-            className="black-text animate__animated animate__delay-3s animate__fadeIn greyText center "
-            s={6}
-            m={6}
-            l={3}
-          >
-            <img alt="placeholder" src="https://via.placeholder.com/150"></img>
-
-          </Col>
-          <Col
-            className="black-text animate__animated animate__delay-3s animate__fadeIn greyText center "
-            s={6}
-            m={6}
-            l={3}
-          >
-            <img alt="placeholder" src="https://via.placeholder.com/150"></img>
-
-          </Col>
-          <Col
-            className="black-text animate__animated  animate__delay-3s animate__fadeIn greyText center "
+            className="black-text spaceSmall animate__animated  animate__delay-3s animate__fadeIn greyText center "
             s={6}
             m={6}
             l={3}
@@ -188,9 +110,9 @@ export default function Gallery() {
           </Col>
         </Row>
 
-        <Row className=" space container  ">
+        <Row className="    ">
           <Col
-            className="black-text animate__animated animate__delay-3s animate__fadeIn greyText center "
+            className="black-text spaceSmall animate__animated animate__delay-3s animate__fadeIn greyText center "
             s={6}
             m={6}
             l={3}
@@ -199,7 +121,7 @@ export default function Gallery() {
 
           </Col>
           <Col
-            className="black-text animate__animated animate__delay-3s animate__fadeIn greyText center "
+            className="black-text spaceSmall animate__animated animate__delay-3s animate__fadeIn greyText center "
             s={6}
             m={6}
             l={3}
@@ -208,7 +130,7 @@ export default function Gallery() {
 
           </Col>
           <Col
-            className="black-text animate__animated animate__delay-3s animate__fadeIn greyText center "
+            className="black-text spaceSmall animate__animated animate__delay-3s animate__fadeIn greyText center "
             s={6}
             m={6}
             l={3}
@@ -217,7 +139,7 @@ export default function Gallery() {
 
           </Col>
           <Col
-            className="black-text animate__animated  animate__delay-3s animate__fadeIn greyText center "
+            className="black-text spaceSmall animate__animated  animate__delay-3s animate__fadeIn greyText center "
             s={6}
             m={6}
             l={3}
@@ -226,8 +148,88 @@ export default function Gallery() {
 
           </Col>
         </Row>
+
+        <Row className="    ">
+          <Col
+            className="black-text spaceSmall animate__animated animate__delay-3s animate__fadeIn greyText center "
+            s={6}
+            m={6}
+            l={3}
+          >
+            <img alt="placeholder" src="https://via.placeholder.com/150"></img>
+
+          </Col>
+          <Col
+            className="black-text spaceSmall animate__animated animate__delay-3s animate__fadeIn greyText center "
+            s={6}
+            m={6}
+            l={3}
+          >
+            <img alt="placeholder" src="https://via.placeholder.com/150"></img>
+
+          </Col>
+          <Col
+            className="black-text spaceSmall animate__animated animate__delay-3s animate__fadeIn greyText center "
+            s={6}
+            m={6}
+            l={3}
+          >
+            <img alt="placeholder" src="https://via.placeholder.com/150"></img>
+
+          </Col>
+          <Col
+            className="black-text spaceSmall animate__animated  animate__delay-3s animate__fadeIn greyText center "
+            s={6}
+            m={6}
+            l={3}
+          >
+            <img alt="placeholder" src="https://via.placeholder.com/150"></img>
+
+          </Col>
+        </Row>
+
+        <Row className="    ">
+          <Col
+            className="black-text spaceSmall animate__animated animate__delay-3s animate__fadeIn greyText center "
+            s={6}
+            m={6}
+            l={3}
+          >
+            <img alt="placeholder" src="https://via.placeholder.com/150"></img>
+
+          </Col>
+          <Col
+            className="black-text spaceSmall animate__animated animate__delay-3s animate__fadeIn greyText center "
+            s={6}
+            m={6}
+            l={3}
+          >
+            <img alt="placeholder" src="https://via.placeholder.com/150"></img>
+
+          </Col>
+          <Col
+            className="black-text spaceSmall animate__animated animate__delay-3s animate__fadeIn greyText center "
+            s={6}
+            m={6}
+            l={3}
+          >
+            <img alt="placeholder" src="https://via.placeholder.com/150"></img>
+
+          </Col>
+          <Col
+            className="black-text spaceSmall animate__animated  animate__delay-3s animate__fadeIn greyText center "
+            s={6}
+            m={6}
+            l={3}
+          >
+            <img alt="placeholder" src="https://via.placeholder.com/150"></img>
+
+          </Col>
+        </Row>
+
+        </div>
       </section>
-      
+
     </>
   );
 }

@@ -14,11 +14,11 @@ body {
 }
 
 #parallax-1 {
-    background: url(./img/banner.avif);
-
-    background-position: bottom;
-    background-size: cover;
+    background: url(https://cdn.discordapp.com/attachments/709148993262977068/932703758343897158/38e34c8f17e547cc28e0e6b382410f75_1.png);
+    background-attachment: fixed;
+    background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
     height: 55rem;
 }
 
@@ -73,7 +73,7 @@ body {
 }
 
 .caption {
-    font-size: 1.3rem;
+    font-size: 3.3rem;
     font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 
@@ -386,8 +386,9 @@ h2 {
 
 /* -- Spaces -- */
 
-.spaceBannerTitle {
-    margin-top: 45rem;
+.spaceCaption {
+    margin-top: 24rem;
+
 }
 
 .spaceProjects {
@@ -708,8 +709,8 @@ textarea:focus-visible {
     }
 
     #parallax-3 {
-        height: 150rem;
-    }
+        height: 175rem;
+        }
 
     #parallax-2 {
         height: 270rem !important;
@@ -723,6 +724,21 @@ textarea:focus-visible {
         min-height: 10rem;
         max-width: 250px !important;
         max-height: 200px;
+    }
+
+    #parallax-1 {
+        background-size: 994px;
+        background-position: top;
+        height: 40rem;
+    }
+
+    .spaceCaption {
+        margin-top: 20rem;
+    
+    }
+
+    .caption {
+        font-size: 2.3rem;
     }
 }
 
@@ -747,6 +763,17 @@ textarea:focus-visible {
         right: 350px !important;
         /* size: 299px; */
     }
+
+    #parallax-1 {
+        background-size: 994px;
+        background-position: top;
+        height: 40rem;
+    }
+    
+    .caption {
+        font-size: 2rem;
+    }
+
 }
 
 
@@ -759,6 +786,18 @@ textarea:focus-visible {
         top: 600px !important;
         right: 160px !important;
         /* size: 299px; */
+    }
+
+    #parallax-1 {
+        background-size: 994px;
+        background-position: top;
+        height: 40rem;
+    }
+
+
+
+    .caption {
+        font-size: 1.5rem;
     }
 }
 
@@ -780,10 +819,25 @@ textarea:focus-visible {
     .flow-text-small {
         font-size: 0.8rem !important;
     }
+
+    .caption {
+        font-size: 2rem;
+    }
 }
 
 @media only screen and (max-width: 370px) {
     .flow-text-small {
         font-size: .71rem !important;
+    }
+    #parallax-1 {
+        background-size: 994px;
+        background-position: top;
+        height: 40rem;
+    }
+
+   
+
+    .spaceBannerTitle {
+        margin-top: 100%;
     }
 }

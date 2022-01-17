@@ -1,5 +1,5 @@
 import React from 'react';
-import { SideNav, SideNavItem, Icon, Image } from 'react-materialize';
+import { SideNav, SideNavItem, Image } from 'react-materialize';
 import { Link, NavLink } from 'react-router-dom';
 
 const NavTabs = () => {
@@ -25,14 +25,12 @@ const NavTabs = () => {
                 image: 'https://cdn.discordapp.com/attachments/709148993262977068/924377593900331018/Untitled-min.png',
                 name: 'Crane Hardwood Flooring'
               }}
-              
-              
               userView
             />
             <SideNavItem
-     
-      image={<Image alt="test" source="https://cdn.discordapp.com/attachments/709148993262977068/924377593900331018/Untitled-min.png"></Image>}
-    ></SideNavItem>
+
+              image={<Image alt="test" source="https://cdn.discordapp.com/attachments/709148993262977068/924377593900331018/Untitled-min.png"></Image>}
+            ></SideNavItem>
             <SideNavItem>
               <NavLink to="/" onClick={() => window.scrollTo(0, 0)} className="black-text">Home</NavLink>
             </SideNavItem>
@@ -66,7 +64,7 @@ const NavTabs = () => {
           <div>
             <div className="container  animate__animated animate__backInDown animate__delay-4s">
               <div className="nav-wrapper ">
-                <Link to="/" onClick={() => window.scrollTo(0, 0)}  className="titleBig left">Crane Hardwood Flooring</Link>
+                <Link to="/" onClick={() => window.scrollTo(0, 0)} className="titleBig left">Crane Hardwood Flooring</Link>
                 <Link to="/" onClick={() => window.scrollTo(0, 0)} className="titleSmall">Crane Flooring</Link>
 
                 <ul className="right hide-on-med-and-down">
