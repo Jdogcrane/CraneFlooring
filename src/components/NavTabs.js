@@ -4,6 +4,8 @@ import { Link, NavLink } from 'react-router-dom';
 
 const NavTabs = () => {
 
+  
+
   return (
     <div>
 
@@ -64,8 +66,8 @@ const NavTabs = () => {
           <div>
             <div className="container  animate__animated animate__backInDown animate__delay-4s">
               <div className="nav-wrapper ">
-                <Link to="/" onClick={() => window.scrollTo(0, 0)} className="titleBig left">Crane Hardwood Flooring</Link>
-                <Link to="/" onClick={() => window.scrollTo(0, 0)} className="titleSmall">Crane Flooring</Link>
+                <Link to="/" onClick={() => window.scrollTo(0, 0)} className="left"><i className="logo"></i></Link>
+                
 
                 <ul className="right hide-on-med-and-down">
                   <li>

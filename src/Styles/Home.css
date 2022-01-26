@@ -11,10 +11,13 @@ body {
     text-align: unset;
     scroll-behavior: smooth;
     transition: 200ms;
+    font-family: Belwe;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
 }
 
 #parallax-1 {
-    background: url(https://cdn.discordapp.com/attachments/709148993262977068/932703758343897158/38e34c8f17e547cc28e0e6b382410f75_1.png);
+    background: url(../components/images/IMG_9241\(1\).jpeg);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -31,7 +34,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 100px;
-    height: 180rem;
+    height: 200rem;
 }
 
 #parallax-3 {
@@ -41,7 +44,16 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 100px;
-    height: 100rem;
+    height: 150rem;
+}
+
+.logo {
+    background-image: url(https://cdn.discordapp.com/attachments/709148993262977068/924377593900331018/Untitled-min.png);
+    width: 64px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
 }
 
 .shift-parallax-1 {
@@ -57,6 +69,7 @@ body {
 .titleSmall {
     display: none !important;
     font-size: x-large;
+    font-family: futura-pt;
 }
 
 .titleBig {
@@ -66,15 +79,26 @@ body {
     font-size: 1rem;
     letter-spacing: .1em;
     text-transform: uppercase;
+    font-family: futura-pt;
 }
 
 .big-text {
     font-size: 1.5rem;
 }
 
+.banner {
+    background-color: #4b453db4 !important;
+}
+
 .caption {
-    font-size: 3.3rem;
-    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    font-size: 2.2rem;
+    font-family: Belwe;
+}
+
+.lighter {
+    
+    font-family: Belwe;
+    font-weight: lighter !important;
 }
 
 .background-color {
@@ -92,8 +116,22 @@ body {
     margin: 0px;
 }
 
+ul:not(.browser-default)>li {
+    list-style-type: unset;
+}
+
+ul.list {
+    list-style-type: disc;
+    margin-bottom: 0.5rem;
+}
+
 .projects-container {
     margin-top: 2rem;
+}
+
+.reviewColor {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 2px 1px 20px rgba(0, 0, 0, 0.466);
 }
 
 .parallax-container2 {
@@ -160,7 +198,11 @@ nav {
 }
 
 .indicator-item.active {
-    background-color: grey !important;
+    background-color: rgb(255, 145, 0) !important;
+}
+
+.indicator-item {
+    background-color: #ff6d459a !important;
 }
 
 .btn-floating {
@@ -186,10 +228,11 @@ button:focus {
     padding: 1rem;
     border: solid #ff6c45 2px;
     font-size: 1rem;
-    font-weight: bold;
+    font-weight: Bold;
     color: #ff6c45;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-transform: uppercase;
+
     letter-spacing: .1em;
 }
 
@@ -217,9 +260,14 @@ button:focus {
 
 
 .normalText {
-    font-size: 1.3rem;
-    font-family: Arial;
-    color: rgba(40, 26, 23, .6)
+    font-family: minion-pro;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 21px;
+    letter-spacing: .01em;
+    line-height: 1.8em;
+    text-transform: none;
+    color: rgba(40, 26, 23, .6);
 }
 
 .normalTextUnique {
@@ -241,7 +289,7 @@ p {
 }
 
 .grey {
-    color: rgba(40,26,23,.6)
+    color: rgba(40, 26, 23, .6)
 }
 
 
@@ -250,7 +298,7 @@ p {
 }
 
 .title {
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 .textTheme {
@@ -287,9 +335,20 @@ h2 {
     padding-right: 0.5rem;
 }
 
+.spaceLeft {
+    margin-left: 3rem;
+}
+
+.contain3 {
+    margin: 0 auto;
+    max-width: 90%;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
 .contain2 {
     margin: 0 auto;
-    max-width: 400px;
+    max-width: 888px;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
 }
@@ -387,7 +446,7 @@ h2 {
 /* -- Spaces -- */
 
 .spaceCaption {
-    margin-top: 24rem;
+    margin-top: 46rem;
 
 }
 
@@ -705,15 +764,15 @@ textarea:focus-visible {
     }
 
     html, body {
-        overflow-x: hidden;
+        overflow-x: none;
     }
 
     #parallax-3 {
-        height: 175rem;
-        }
+        height: 310rem;
+    }
 
     #parallax-2 {
-        height: 270rem !important;
+        height: 230rem !important;
     }
 
     textarea {
@@ -733,7 +792,7 @@ textarea:focus-visible {
     }
 
     .spaceCaption {
-        margin-top: 20rem;
+        margin-top: 30rem;
     
     }
 
@@ -750,7 +809,7 @@ textarea:focus-visible {
     position: fixed;
     right: 5px !important;
     bottom: 5px !important;
-    z-index: 9999;
+    z-index: 9999 !important;
 }
 
 @media only screen and (max-width: 780px) {
@@ -769,21 +828,28 @@ textarea:focus-visible {
         background-position: top;
         height: 40rem;
     }
-    
+
+    #parallax-2 {
+        height: 250rem !important;
+    }
+
     .caption {
         font-size: 2rem;
     }
 
 }
 
+.brand-t1-wrap .ribbon {
+    display: none !important;
+}
 
 @media only screen and (max-width: 520px) {
     .ae-meeting-emd-inline-bg .clo {
-        width: 49px;
-        height: 76px;
-        position: absolute;
+        width: 500px;
+        height: 500px;
+        position: bottom;
         z-index: 1;
-        top: 600px !important;
+        top: 650px !important;
         right: 160px !important;
         /* size: 299px; */
     }
@@ -794,30 +860,35 @@ textarea:focus-visible {
         height: 40rem;
     }
 
-
-
-    .caption {
-        font-size: 1.5rem;
+    #parallax-2 {
+        height: 260rem !important;
     }
+
+
+
 }
 
-/* Text adjustment for smaller media in "what I learned" */
+/* Text adjustment for smaller media */
 
-@media only screen and (max-width: 520px) {
-    .flow-text-small {
-        font-size: 1.0rem !important;
-    }
-}
+
 
 @media only screen and (max-width: 445px) {
     .flow-text-small {
         font-size: 1rem !important;
     }
+
+    #parallax-2 {
+        height: 280rem !important;
+    }
 }
 
-@media only screen and (max-width: 413px) {
+@media only screen and (max-width: 414px) {
     .flow-text-small {
         font-size: 0.8rem !important;
+    }
+
+    #parallax-2 {
+       height: 290rem !important;
     }
 
     .caption {
@@ -825,17 +896,44 @@ textarea:focus-visible {
     }
 }
 
-@media only screen and (max-width: 370px) {
+@media only screen and (max-width: 390px) {
     .flow-text-small {
         font-size: .71rem !important;
     }
+
     #parallax-1 {
         background-size: 994px;
         background-position: top;
         height: 40rem;
     }
 
-   
+    #parallax-2 {
+        height: 320rem !important;
+    }
+
+
+
+    .spaceBannerTitle {
+        margin-top: 100%;
+    }
+}
+
+@media only screen and (max-width: 340px) {
+    .flow-text-small {
+        font-size: .71rem !important;
+    }
+
+    #parallax-1 {
+        background-size: 994px;
+        background-position: top;
+        height: 40rem;
+    }
+
+    #parallax-2 {
+        height: 320rem !important;
+    }
+
+
 
     .spaceBannerTitle {
         margin-top: 100%;
