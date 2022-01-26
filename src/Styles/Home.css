@@ -5,6 +5,15 @@
     --text-theme: #ff9800;
 }
 
+@font-face {font-family: "Belwe";
+    src: url("https://db.onlinewebfonts.com/t/c72b62c8d1ff66f203b46aa0003a801d.eot"); /* IE9*/
+    src: url("https://db.onlinewebfonts.com/t/c72b62c8d1ff66f203b46aa0003a801d.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("https://db.onlinewebfonts.com/t/c72b62c8d1ff66f203b46aa0003a801d.woff2") format("woff2"), /* chrome firefox */
+    url("https://db.onlinewebfonts.com/t/c72b62c8d1ff66f203b46aa0003a801d.woff") format("woff"), /* chrome firefox */
+    url("https://db.onlinewebfonts.com/t/c72b62c8d1ff66f203b46aa0003a801d.ttf") format("truetype"), /* chrome firefox opera Safari, Android, iOS 4.2+*/
+    url("https://db.onlinewebfonts.com/t/c72b62c8d1ff66f203b46aa0003a801d.svg#Belwe") format("svg"); /* iOS 4.1- */
+}
+
 body {
     background-color: #f9fcff;
     background-image: linear-gradient(160deg, #3b3b3b 0%, #dee4ea 74%);
