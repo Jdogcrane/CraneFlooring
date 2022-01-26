@@ -24,17 +24,16 @@ export default function Home() {
           <p className="invisible">Hardwood Flooring</p>
         </div>
         <div className="spaceCaption center ">
-          <p className="caption banner white-text animate__animated animate__fadeInLeft animate__delay-8s background-color">Crane Flooring <p className="normalText white-text italic">“Excellence  in  every  step” </p> </p>
+          <p className="caption banner white-text animate__animated animate__fadeInDown animate__delay-8s background-color">Crane Flooring <p className="normalText white-text italic">“Excellence  in  every  step” </p> </p>
         </div>
 
       </section>
 
       <section id="parallax-2" className="">
-
-        <div className="center ">
-
-          <button onClick={() => myFunction() + window.location.reload()} className="btn-custom" >Set Appointment</button>
-        </div>
+      <div className="center ">
+            <NavLink to="/gallery" onClick={() => window.scrollTo(0, 0)} className="btn-custom" >Project Gallery</NavLink>
+          </div>
+        
 
         <div className="contain2 borderBot space ">
 
@@ -52,9 +51,10 @@ export default function Home() {
               Our careful attention to detail consistently provides each of our customers with stunning results. </li>
             <li className="spaceSmaller">Licensed and insured in the State of Virginia. </li>
           </ul>
-          <div className="center space spaceDown">
-            <NavLink to="/gallery" onClick={() => window.scrollTo(0, 0)} className="btn-custom" >Project Gallery</NavLink>
-          </div>
+          <div className="center ">
+
+          <button onClick={() => myFunction() + window.location.reload()} className="btn-custom space spaceDown" >Set Appointment</button>
+        </div>
 
         </div>
         <div className="contain1 borderBot space ">

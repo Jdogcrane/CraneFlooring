@@ -96,11 +96,18 @@ body {
 }
 
 .banner {
-    background-color: #4b453db4 !important;
+    background-color: #574a3bb4 !important;
+    padding-top: 8rem;
+    box-shadow: 0 40px 40px #574a3bb9;
+}
+
+.spaceCaption {
+    margin-top: 0rem;
+
 }
 
 .caption {
-    font-size: 2.2rem;
+    font-size: 3rem;
     font-family: Belwe;
 }
 
@@ -454,10 +461,7 @@ h2 {
 
 /* -- Spaces -- */
 
-.spaceCaption {
-    margin-top: 46rem;
 
-}
 
 .spaceProjects {
     margin-top: 12rem;
@@ -801,12 +805,12 @@ textarea:focus-visible {
     }
 
     .spaceCaption {
-        margin-top: 30rem;
+        margin-top: 1rem;
     
     }
 
     .caption {
-        font-size: 2.3rem;
+        font-size: 3rem;
     }
 }
 
@@ -843,7 +847,7 @@ textarea:focus-visible {
     }
 
     .caption {
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
 }
@@ -901,7 +905,7 @@ textarea:focus-visible {
     }
 
     .caption {
-        font-size: 2rem;
+        font-size: 3rem;
     }
 }
 
