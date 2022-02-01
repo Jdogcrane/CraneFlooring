@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import NavTabs from './NavTabs';
 import pageData from './pages';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import Home from './pages/Home';
 import Gallery from './pages/gallery';
 // import Resume from './pages/Resume';
@@ -24,7 +24,9 @@ const PortfolioContainer = () => {
       <NavTabs {...data} />
       <Route path="/" exact component={Home} />
       <Route path="/gallery" exact component={Gallery} />
-      <Route path='*' exact={true} component={Home} />
+      <Route path='*' exact/>
+      <Redirect to="/" />
+      
       {/* <Route path="/Resume" exact component={Resume} /> */}
       {/* <Route path="/Contact" exact component={Contact} /> */}
       <Footer />

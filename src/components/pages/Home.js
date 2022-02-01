@@ -23,8 +23,8 @@ export default function Home() {
         <div>
           <p className="invisible">Hardwood Flooring</p>
         </div>
-        <div className="spaceCaption center ">
-          <p className="caption banner white-text animate__animated animate__fadeInDown animate__delay-8s background-color">Crane Flooring <p className="normalText white-text italic">“Excellence  in  every  step” </p> </p>
+        <div className="spaceCaption center animate__animated animate__fadeIn animate__delay-8s">
+          <p className="caption banner white-text background-color">Crane Flooring <p className="normalText white-text italic">“Excellence  in  every  step” </p> </p>
         </div>
 
       </section>

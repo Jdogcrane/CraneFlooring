@@ -31,7 +31,7 @@ const NavTabs = () => {
             />
             <SideNavItem
 
-              image={<Image alt="test" source="https://cdn.discordapp.com/attachments/709148993262977068/924377593900331018/Untitled-min.png"></Image>}
+              image={<Image alt="logo" source="https://cdn.discordapp.com/attachments/709148993262977068/924377593900331018/Untitled-min.png"></Image>}
             ></SideNavItem>
             <SideNavItem>
               <NavLink to="/" onClick={() => window.scrollTo(0, 0)} className="black-text">Home</NavLink>
