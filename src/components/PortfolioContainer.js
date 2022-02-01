@@ -24,6 +24,7 @@ const PortfolioContainer = () => {
       <NavTabs {...data} />
       <Route path="/" exact component={Home} />
       <Route path="/gallery" exact component={Gallery} />
+      <Route path='*' exact={true} component={Home} />
       {/* <Route path="/Resume" exact component={Resume} /> */}
       {/* <Route path="/Contact" exact component={Contact} /> */}
       <Footer />
