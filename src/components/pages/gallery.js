@@ -7,7 +7,7 @@ export default function Gallery() {
     <>
       <section id="parallax-3">
 
-        <div className="center contain1 animate__animated  animate__delay-3s animate__fadeIn">
+        <div className="center contain1 animate__animated  animate__delay-1s animate__fadeIn">
 
         
 

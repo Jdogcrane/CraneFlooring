@@ -154,16 +154,15 @@ ul.list {
     height: 20rem;
 }
 
-/* .nav ul a:active {
-    
-} */
+
 
 .invisible {
     visibility: hidden;
 }
 
+
 nav a {
-    color: rgb(0, 0, 0);
+    
     font-weight: 500;
     font-style: normal;
     font-size: 1rem;
@@ -172,12 +171,20 @@ nav a {
 }
 
 .nav ul a {
-    color: rgb(0, 0, 0);
+    color: black;
     font-weight: 500;
     font-style: normal;
     font-size: 1rem;
     letter-spacing: .1em;
     text-transform: uppercase;
+}
+
+.active {
+    text-decoration:overline #ff6c45;
+}
+
+.carousel-item.reviewColor.active {
+    text-decoration:  unset !important;
 }
 
 nav ul a:hover {

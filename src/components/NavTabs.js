@@ -20,7 +20,7 @@ const NavTabs = () => {
             }}
             trigger={<i className="material-icons right black-text titleSmall" node="button">menu</i>}
           >
-            <SideNavItem className="black-text"
+            <SideNavItem className=""
               user={{
                 background: 'https://cdn.discordapp.com/attachments/709148993262977068/924377426514034709/seamless-wood-floor-texture-hardwood-floor-texture-picture-id645858422.png',
                 email: 'Cell Phone: (757)-634-1156',
@@ -34,16 +34,16 @@ const NavTabs = () => {
               image={<Image alt="logo" source="https://cdn.discordapp.com/attachments/709148993262977068/924377593900331018/Untitled-min.png"></Image>}
             ></SideNavItem>
             <SideNavItem>
-              <NavLink to="/" onClick={() => window.scrollTo(0, 0)} className="black-text">Home</NavLink>
+              <NavLink to="/" exact activeStyle onClick={() => window.scrollTo(0, 0)} className="">Home</NavLink>
             </SideNavItem>
             <SideNavItem divider />
             <SideNavItem>
-              <NavLink to="/gallery" onClick={() => window.scrollTo(0, 0)} className="black-text" >Gallery</NavLink>
+              <NavLink to="/gallery" activeStyle  exact onClick={() => window.scrollTo(0, 0)} className="" >Gallery</NavLink>
             </SideNavItem>
             <SideNavItem divider />
             {/* <SideNavItem divider />
             <SideNavItem waves >
-              <NavLink to="/resume" onClick={() => window.scrollTo(0, 0)}>Resume</NavLink>
+              <NavLink to="/resume" exact activeStyle onClick={() => window.scrollTo(0, 0)}>Resume</NavLink>
             </SideNavItem>
             <SideNavItem divider /> */}
             <div className="center ">
@@ -67,23 +67,23 @@ const NavTabs = () => {
             </div>
           </SideNav>
           <div>
-            <div className="container  animate__animated animate__backInDown animate__delay-4s">
+            <div className="container  animate__animated animate__fadeIn animate__delay-2s">
               <div className="nav-wrapper ">
-                <Link to="/" onClick={() => window.scrollTo(0, 0)} className="left"><i className="logo"></i></Link>
+                <Link to="/" exact activeStyle onClick={() => window.scrollTo(0, 0)} className="left"><i className="logo"></i></Link>
 
 
                 <ul className="right hide-on-med-and-down">
                   <li>
-                    <NavLink to="/" onClick={() => window.scrollTo(0, 0)}>Home</NavLink>
+                    <NavLink to="/" exact activeStyle onClick={() => window.scrollTo(0, 0)}>Home</NavLink>
                   </li>
                   <li>
-                    <NavLink to="/gallery" onClick={() => window.scrollTo(0, 0)} >Gallery</NavLink>
+                    <NavLink to="/gallery" exact activeStyle onClick={() => window.scrollTo(0, 0)} >Gallery</NavLink>
                   </li>
                   <li>
 
                   </li>
                   {/* <li>
-                    <NavLink to="/Contact" onClick={() => window.scrollTo(0, 0)} >Contact</NavLink>
+                    <NavLink to="/Contact" exact activeStyle onClick={() => window.scrollTo(0, 0)} >Contact</NavLink>
                   </li> */}
                 </ul>
               </div>
