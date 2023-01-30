@@ -56,7 +56,7 @@ export default function Gallery() {
             >
               <img
                 alt="flooring-img"
-                src="https://cdn.discordapp.com/attachments/709148993262977068/936003526658756608/IMG_0944.jpeg"
+                src="https://cdn.discordapp.com/attachments/709148993262977068/936003525077528596/IMG_0937.jpeg"
                 width="400"
                 height="400"
               />
@@ -108,7 +108,7 @@ export default function Gallery() {
             >
               <img
                 alt="flooring-img"
-                src="https://cdn.discordapp.com/attachments/709148993262977068/936003525077528596/IMG_0937.jpeg"
+                src="https://cdn.discordapp.com/attachments/709148993262977068/936003526969151518/IMG_1176.jpeg"
                 width="400"
                 height="400"
               />
@@ -134,7 +134,7 @@ export default function Gallery() {
             >
               <img
                 alt="flooring-img"
-                src="https://cdn.discordapp.com/attachments/709148993262977068/936003526969151518/IMG_1176.jpeg"
+                src="https://cdn.discordapp.com/attachments/709148993262977068/936003526658756608/IMG_0944.jpeg"
                 width="400"
                 height="400"
               />
