@@ -16,7 +16,7 @@
 
 body {
     background-color: #f9fcff;
-    background-image: linear-gradient(160deg, #3b3b3b 0%, #dee4ea 74%);
+    background-image: #f9fcff;
     text-align: unset;
     scroll-behavior: smooth;
     transition: 200ms;
@@ -43,7 +43,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 100px;
-    height: 200rem;
+    height: 150rem;
 }
 
 #parallax-3 {
@@ -96,9 +96,9 @@ body {
 }
 
 .banner {
-    background-color: #574a3bb4 !important;
+    background-color: #2b2621b9 !important;
     padding-top: 8rem;
-    box-shadow: 0 40px 40px #574a3bb9;
+    box-shadow: 0 40px 40px #2b2621b9;
 }
 
 .spaceCaption {
@@ -952,8 +952,6 @@ textarea:focus-visible {
     #parallax-2 {
         height: 320rem !important;
     }
-
-
 
     .spaceBannerTitle {
         margin-top: 100%;

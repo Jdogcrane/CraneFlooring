@@ -30,8 +30,9 @@ export default function Home() {
       </section>
 
       <section id="parallax-2" className="">
-        <div className="center ">
-          <NavLink to="/gallery" onClick={() => window.scrollTo(0, 0)} className="btn-custom" >Project Gallery</NavLink>
+        <div className="center">
+          <NavLink to="/gallery" onClick={() => window.scrollTo(0, 0)} className="btn-custom spacing2" >Project Gallery</NavLink>
+          <NavLink to="/contact" onClick={() => window.scrollTo(0, 0)} className="btn-custom" >Set Appointment</NavLink>
         </div>
 
 
@@ -51,13 +52,11 @@ export default function Home() {
               Our careful attention to detail consistently provides each of our customers with stunning results. </li>
             <li className="spaceSmaller">Licensed and insured in the State of Virginia. </li>
           </ul>
-          <div className="center ">
-
-            <button onClick={() => myFunction() + window.location.reload()} className="btn-custom space spaceDown" >Set Appointment</button>
-          </div>
+         
+          
 
         </div>
-        <div className="contain1 borderBot space ">
+        <div className="contain1 space ">
           <p className="title spacing2 ">
             About us
             <a className="btn-floating spacing2"
@@ -93,13 +92,13 @@ export default function Home() {
 
           <Carousel
             carouselId="Carousel-42"
-            className="black-text center carousel space reviewColor contain2"
+            className="black-text center carousel space reviewColor contain2 borderRound"
             options={{
               fullWidth: true,
               indicators: true
             }}
           >
-            <div className="reviewColor">
+            <div className="reviewColor borderRound">
               <p className="space1 contain3"> “Jeremiah was very easy to work with and delivered on his promise to make our floors look like new. Very professional and kind. Highly recommend!!!”
               </p>
               <p className="greyText contain3"> — GLORIA MATABARO </p>
@@ -124,15 +123,7 @@ export default function Home() {
               <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
             </div>
           </Carousel>
-
-          <div id="scheduler" className="center shadow">
-
-            <div class="apptthingemb contain1 scheduleVis space" data-appt-url="cranehardwoodflooring" data-appt-types="ko14777" data-page-text="000000" data-page-link="000000" data-page-details="false" data-emb-num="1" >
-              <a href="https://appointmentthing.com" title="Appointment Scheduling">Appointment Scheduling</a></div>
-          </div>
         </div>
-
-
 
       </section>
 

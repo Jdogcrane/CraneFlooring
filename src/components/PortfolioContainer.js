@@ -9,6 +9,7 @@ import Gallery from './pages/gallery';
 import Footer from './Footer';
 import '../Styles/Home.css';
 import 'materialize-css';
+import Contact from './pages/Contact';
 const PortfolioContainer = () => {
   const [currentPage, setCurrentPage] = useState('/');
   
@@ -24,6 +25,7 @@ const PortfolioContainer = () => {
       <NavTabs {...data} />
       <Route path="/" exact component={Home} />
       <Route path="/gallery" exact component={Gallery} />
+      <Route path="/contact" exact component={Contact} />
       <Route path='*' exact/>
       <Redirect to="/" />
       
