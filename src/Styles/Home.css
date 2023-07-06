@@ -777,7 +777,24 @@ textarea:focus-visible {
     visibility: hidden;
 }
 
+.video {
+
+}
+
+.videoSizing {
+    min-width: 43vw;
+    min-height: 50vh;
+}
+
 @media only screen and (max-width: 994px) {
+
+    .videoSizing {
+        min-width: 43vh;
+        min-height: 20vh;
+        margin: none;
+        padding: none;
+    }
+
     .titleBig {
         display: none;
     }

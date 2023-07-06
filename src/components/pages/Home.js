@@ -19,9 +19,11 @@ export default function Home() {
         </div>
 
       </section>
+      <div className="center spacing2 video">
+      <iframe className="videoSizing" src="https://www.youtube.com/embed/lOTXXelNW30" title="YouTube video player" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; web-share; fullscreen"></iframe>
+      </div>
 
-
-      <Row className="center space">
+      <Row className="center spaceSmaller">
         <NavLink to="/gallery" onClick={() => window.scrollTo(0, 0)} className="btn-custom spacing2" >Project Gallery</NavLink>
         <NavLink to="/contact" onClick={() => window.scrollTo(0, 0)} className="btn-custom" >Set Appointment</NavLink>
       </Row>
