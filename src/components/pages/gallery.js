@@ -596,7 +596,7 @@ export default function Gallery() {
             </MediaBox>
 
           </Col>
-          
+
           <Col
             className="black-text spaceSmall  greyText  fade"
             s={12}
@@ -832,7 +832,7 @@ export default function Gallery() {
             </MediaBox>
 
           </Col>
-          
+
           <Col
             className="black-text spaceSmall  greyText  fade"
             s={12}

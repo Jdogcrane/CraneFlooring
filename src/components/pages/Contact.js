@@ -6,11 +6,11 @@ export default function Contact() {
         <div>
           <p className="invisible">Hardwood Flooring</p>
         </div>
-        <div className="space spaceDown3">
+        <div className="space">
           <h4 className='spaceDown'>Set Appointment</h4>
-          <iframe scrolling="no"
+          <iframe scrolling="no" className='iframeStyling'
             frameBorder="0"
-            width="100%" height="100%" title="appt" src="https://appointmentthing.com/cranehardwoodflooring/?embed=true&emb_mtd=1&etypes=ko14777&edetails=false&eptx=000000&eplk=000000#ae-meeting-emd-1"></iframe>
+            title="appt" src="https://calendly.com/cranehardwoodflooring/estimate?hide_event_type_details=1&hide_gdpr_banner=1"></iframe>
         </div>
       </div>
 
