@@ -1,6 +1,7 @@
 import React from 'react';
 import { SideNav, SideNavItem, Image } from 'react-materialize';
 import { Link, NavLink } from 'react-router-dom';
+import logo from './images/logo.webp'
 
 const NavTabs = () => {
 
@@ -22,16 +23,16 @@ const NavTabs = () => {
           >
             <SideNavItem className=""
               user={{
-                background: 'https://cdn.discordapp.com/attachments/709148993262977068/924377426514034709/seamless-wood-floor-texture-hardwood-floor-texture-picture-id645858422.png',
+                background: 'https://cdn.discordapp.com/attachments/709148993262977068/924377426514034709/seamless-wood-floor-texture-hardwood-floor-texture-picture-id645858422.png?ex=65ff2810&is=65ecb310&hm=fd03937158a939d8481beed3d4d9856075c0428da1aff57f574989bdb72f1bf1&',
                 email: 'Cell Phone: (757)-634-1156',
-                image: 'https://cdn.discordapp.com/attachments/709148993262977068/924377593900331018/Untitled-min.png',
+                image: logo,
                 name: 'Crane Hardwood Flooring'
               }}
               userView
             />
             <SideNavItem
 
-              image={<Image alt="logo" source="https://cdn.discordapp.com/attachments/709148993262977068/924377593900331018/Untitled-min.png"></Image>}
+              image={<Image alt="logo" source={logo}></Image>}
             ></SideNavItem>
             <SideNavItem>
               <NavLink to="/" exact activeStyle onClick={() => window.scrollTo(0, 0)} className="">Home</NavLink>
@@ -68,7 +69,7 @@ const NavTabs = () => {
           <div>
             <div className="container  animate__animated animate__fadeIn animate__delay-2s">
               <div className="nav-wrapper ">
-                <Link to="/" exact activeStyle onClick={() => window.scrollTo(0, 0)} className="left"><i className="logo"></i></Link>
+                <Link  to="/" exact activeStyle onClick={() => window.scrollTo(0, 0)} className="left"><i className='logo' alt="logo"></i></Link>
 
 
                 <ul className="right hide-on-med-and-down">

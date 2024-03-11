@@ -1,3 +1,4 @@
+
 :root {
     --primary-theme: white;
     --secondary-theme: -webkit-linear-gradient(left, #00000079, #300e3577);
@@ -26,7 +27,7 @@ body {
 }
 
 #parallax-1 {
-    background: url(../components/images/IMG_9241\(1\).jpeg);
+    background: url(../components/images/hero.jpeg);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -57,7 +58,7 @@ body {
 }
 
 .logo {
-    background-image: url(https://cdn.discordapp.com/attachments/709148993262977068/924377593900331018/Untitled-min.png);
+    background-image: url(../components/images/logo.webp);
     width: 64px;
     
     background-position: center;
