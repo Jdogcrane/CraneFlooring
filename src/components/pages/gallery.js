@@ -8,7 +8,7 @@ const imageContext = require.context('../images/gallery', false, /\.(png|jpe?g|w
 const imageFiles = imageContext.keys();
 
 const images = imageFiles.map((imageFile, index) => ({
-  url: imageContext(imageFile).default,
+  url: imageContext(imageFile),
   order: index,
 }));
 
