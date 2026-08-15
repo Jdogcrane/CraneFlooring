@@ -40,6 +40,42 @@ html { overflow-x: hidden; }
     will-change: transform;
 }
 
+.video-placeholder {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+    .video-placeholder .videoSizing {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+.video-play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 68px;
+    height: 48px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    font-size: 22px;
+    pointer-events: none;
+}
+
 .hero-overlay {
     position: absolute;
     top: 0;
