@@ -1,11 +1,11 @@
 import React from "react";
-import PortfolioContainer from "./components/PortfolioContainer";
+import AppContent from "./components/AppContent";
 
 
 
 const App = () => {
   return (
-    <PortfolioContainer />
+      <AppContent/>
   );
 };
 

@@ -8,12 +8,8 @@
 
 @font-face {
     font-family: "Belwe";
-    src: url("https://db.onlinewebfonts.com/t/c72b62c8d1ff66f203b46aa0003a801d.eot");
-    src: url("https://db.onlinewebfonts.com/t/c72b62c8d1ff66f203b46aa0003a801d.eot?#iefix") format("embedded-opentype"),
-    url("https://db.onlinewebfonts.com/t/c72b62c8d1ff66f203b46aa0003a801d.woff2") format("woff2"),
-    url("https://db.onlinewebfonts.com/t/c72b62c8d1ff66f203b46aa0003a801d.woff") format("woff"),
-    url("https://db.onlinewebfonts.com/t/c72b62c8d1ff66f203b46aa0003a801d.ttf") format("truetype"),
-    url("https://db.onlinewebfonts.com/t/c72b62c8d1ff66f203b46aa0003a801d.svg#Belwe") format("svg");
+    src: url("./Font/belweFont.woff2") format("woff2");
+    font-display: swap;
 }
 
 body {
@@ -146,6 +142,49 @@ html { overflow-x: hidden; }
     max-width: 150px;
     border: solid 1px black;
     background: -webkit-linear-gradient(left, #00000085, #700f548e);
+}
+
+.schedule-button {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 22px;
+    background: #1f1f1f;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+    transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+    .schedule-button:hover {
+        background: #333;
+        color: #fff;
+        text-decoration: none;
+        transform: translateY(-1px);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+    }
+
+    .schedule-button:active {
+        transform: translateY(0);
+    }
+
+@media (max-width: 600px) {
+    .schedule-button {
+        right: 16px;
+        bottom: 16px;
+        padding: 11px 17px;
+        font-size: 14px;
+    }
 }
 
 .titleSmall {
@@ -501,7 +540,7 @@ button:focus {
     width: inherit;
     display: inline-block;
     text-align: center;
-    color: rgb(92, 20, 82);
+    color: #ff6c45;
     font-size: 1.6rem;
     line-height: 40px;
 }
@@ -561,6 +600,25 @@ h2 { margin: 0px; }
 .link-black:hover { color: var(--text-theme) !important; transition: 100ms; border-bottom: rgb(0, 0, 0) solid 1px !important; }
 
 /* ---- Mobile Navigation ---- */
+.sidenav-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 9998;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.sidenav-backdrop-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
 
 .sidenav {
     position: fixed;
@@ -568,127 +626,32 @@ h2 { margin: 0px; }
     left: 0;
     width: 300px;
     max-width: 85vw;
-    height: 100%;
-    margin: 0;
-    padding: 0;
+    height: 100vh;
     background: #fff;
-    z-index: 999;
+    z-index: 9999;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
     overflow-y: auto;
-    transform: translateX(-105%);
-    transition: transform 200ms ease;
-    visibility: hidden;
-    box-shadow: 2px 0 12px rgba(0, 0, 0, 0.15);
+    touch-action: pan-y;
 }
 
-    .sidenav.sidenav-open {
-        transform: translateX(0);
-        visibility: visible;
-    }
 
-.sidenav-overlay {
-    position: fixed;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 998;
+.sidenav-open {
+    transform: translateX(0);
 }
-
-.sidenav .user-view {
-    position: relative;
-    min-height: 200px;
-    padding: 32px 32px 16px;
-    overflow: hidden;
-}
-
-    .sidenav .user-view .background {
-        position: absolute;
-        inset: 0;
-        z-index: 0;
-    }
-
-        .sidenav .user-view .background img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-    .sidenav .user-view::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: rgba(0, 0, 0, 0.35);
-        z-index: 1;
-    }
-
-    .sidenav .user-view > *:not(.background) {
-        position: relative;
-        z-index: 2;
-    }
-
-    .sidenav .user-view .circle {
-        display: block;
-        width: 64px;
-        height: 64px;
-        margin-bottom: 16px;
-        border-radius: 50%;
-        object-fit: cover;
-    }
-
-    .sidenav .user-view .name,
-    .sidenav .user-view .email {
-        display: block;
-    }
-
-    .sidenav .user-view .name {
-        font-size: 18px;
-        margin-bottom: 8px;
-    }
-
-    .sidenav .user-view .email {
-        font-size: 14px;
-    }
-
-.sidenav > ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-    .sidenav > ul > li {
-        margin: 0;
-        padding: 0;
-    }
 
 .sidenav-link {
     display: block;
     width: 100%;
-    height: 48px;
-    line-height: 48px;
-    padding: 0 32px !important;
-    text-align: center !important;
-    box-sizing: border-box;
-}
-
-.sidenav .divider {
-    height: 1px;
-    margin: 0;
-    background: #e0e0e0;
-}
-
-.sidenav .center {
-    padding: 12px 0;
-}
-
-.sidenav .btn-floating {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    padding: 18px 0 !important;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
 }
 
 @media only screen and (min-width: 995px) {
     .sidenav,
-    .sidenav-overlay {
+    .sidenav-backdrop {
         display: none;
     }
 }

@@ -179,8 +179,8 @@ export default function Home() {
                         src={heroImage}
                         alt="Hardwood flooring refinishing by Crane Flooring in Hampton Roads, Virginia"
                         className="hero-img"
-                        width="4032"
-                        height="3024"
+                        width="900"
+                        height="1600"
                         decoding="async"
                         fetchpriority="high"
                     />

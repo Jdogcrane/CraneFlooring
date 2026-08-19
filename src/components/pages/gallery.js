@@ -55,7 +55,7 @@ export default function Gallery() {
 
             <main className="center contain1 animate__animated spaceDown animate__delay-1s animate__fadeIn">
                 <div className="gallery-header">
-                    <p className="black-text normalText">
+                    <p className="black-text greyText title strong">
                         Project
                     </p>
 
