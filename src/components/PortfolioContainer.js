@@ -5,7 +5,6 @@ import { BrowserRouter, Route, Redirect } from 'react-router-dom';
 import Home from './pages/Home';
 import Footer from './Footer';
 import '../Styles/Home.css';
-import 'materialize-css';
 const Gallery = lazy(() => import('./pages/gallery'));
 const Contact = lazy(() => import('./pages/Contact'));
 
