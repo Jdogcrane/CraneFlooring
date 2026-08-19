@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import heroImage from "../images/hero.webp";
-import youtubeThumbnail from "../images/logo.webp";
+// import youtubeThumbnail from "../images/logo.webp";
 
 const reviews = [
     {
