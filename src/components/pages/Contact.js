@@ -24,5 +24,6 @@ export default function Contact() {
 
             <div id="calendly-inline" />
         </div>
+        //TODO: for some reason way too much space here on mobile
     );
 }
