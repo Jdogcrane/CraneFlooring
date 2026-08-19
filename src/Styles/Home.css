@@ -24,10 +24,52 @@ body {
 }
 
 html { overflow-x: hidden; }
-
 #parallax-1 {
     position: relative;
+    height: clamp(1000px, 5vw, 750px);
     overflow: hidden;
+}
+
+@media only screen and (max-width: 994px) {
+    #parallax-1 {
+        height: clamp(300px, 5vw, 750px);
+    }
+}
+
+.hero-image-container {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+.hero-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center bottom;
+    will-change: transform;
+}
+
+.hero-text {
+    position: absolute;
+    top: clamp(50px, 10vw, 200px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    max-width: 90%;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient( to bottom, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.55) 55%, rgba(0,0,0,0) 100% );
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 18%;
 }
 
 .sr-only {
@@ -42,19 +84,6 @@ html { overflow-x: hidden; }
     border: 0;
 }
 
-.hero-image-container {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-
-.hero-img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-    will-change: transform;
-}
 
 .video-placeholder {
     position: relative;
@@ -92,22 +121,6 @@ html { overflow-x: hidden; }
     pointer-events: none;
 }
 
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.55) 55%, rgba(0,0,0,0) 100%);
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    padding-top: 18%;
-}
-
-.hero-text {
-    text-align: center;
-}
 
 #parallax-2 {
     background: #ffffff;
@@ -300,17 +313,11 @@ ul.list { list-style-type: disc; margin-bottom: 0.5rem; }
 .review-slider {
     display: flex;
     gap: 1rem;
-    overflow-x: auto;
-    cursor: grab;
+    overflow-x: hidden;
     padding: 1rem 0 0.5rem;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
     user-select: none;
     scroll-behavior: smooth;
 }
-
-.review-slider:active { cursor: grabbing; }
-.review-slider::-webkit-scrollbar { display: none; }
 
 .review-card {
     flex: 0 0 calc(50% - 0.5rem);
@@ -318,7 +325,6 @@ ul.list { list-style-type: disc; margin-bottom: 0.5rem; }
     border-radius: 10px;
     padding: 1.2rem;
     box-shadow: 0 2px 12px rgba(0,0,0,0.1);
-    scroll-snap-align: start;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -340,7 +346,10 @@ ul.list { list-style-type: disc; margin-bottom: 0.5rem; }
     margin: 0;
 }
 
-.review-stars { color: #ff9800; font-size: 0.8rem; }
+.review-stars {
+    color: #ff9800;
+    font-size: 0.8rem;
+}
 
 /* ---- Google Badge ---- */
 .google-badge {
@@ -760,7 +769,7 @@ textarea:focus-visible { outline-offset: 0px; }
 
 .contact-page {
     padding-top: 80px;
-    padding-bottom: 5rem;
+    padding-bottom: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -770,27 +779,106 @@ textarea:focus-visible { outline-offset: 0px; }
     width: 100%;
 }
 
-#calendly-inline {
+.contact-header {
     width: 100%;
     max-width: 700px;
-    min-height: 1050px;
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
-    #calendly-inline iframe {
-        width: 100% !important;
-        min-height: 1050px !important;
-        border: 0 !important;
+    .contact-header .title {
+        margin-bottom: 0.75rem;
+    }
+
+.contact-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 1.25rem;
+}
+
+    .contact-details a,
+    .contact-details span {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: #ff6c45;
+        font-size: 0.95rem;
+        text-decoration: none;
+    }
+
+.contact-info-grid {
+    width: 100%;
+    max-width: 700px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.contact-info-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.contact-info-icon {
+    flex-shrink: 0;
+    color: #ff6c45;
+    font-size: 1.4rem;
+    margin-top: 0.2rem;
+}
+
+.contact-info-card h2 {
+    font-family: Belwe;
+    font-size: 1.1rem;
+    color: rgba(40, 26, 23, 0.85);
+    margin: 0 0 0.5rem;
+}
+
+.contact-info-card .normalText {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+    .contact-info-card .normalText + .normalText {
+        margin-top: 0.75rem;
+    }
+.contact-scheduler {
+    width: 100%;
+    max-width: 700px;
+}
+
+    .contact-scheduler h2 {
+        text-align: center;
+        font-family: Belwe;
+        font-size: 1.4rem;
+        margin: 0 0 1rem;
     }
 
 @media (max-width: 768px) {
-    #calendly-inline {
-        min-height: 1400px;
+    .contact-info-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+@media (max-width: 450px) {
+    .contact-details {
+        flex-direction: column;
+        gap: 0.75rem;
     }
 
-        #calendly-inline iframe {
-            min-height: 1400px !important;
-            height: 1400px !important;
-        }
+    .contact-header .title {
+        font-size: 1.7rem;
+    }
 }
 
 .brand-t1-wrap .ribbon { display: none !important; }

@@ -1,7 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import heroImage from "../images/hero.webp";
-// import youtubeThumbnail from "../images/logo.webp";
 
 const reviews = [
     {
@@ -62,17 +61,10 @@ export default function Home() {
     const sliderRef = useRef(null);
     const heroRef = useRef(null);
 
-    const isDraggingRef = useRef(false);
-    const dragStartXRef = useRef(0);
-    const dragScrollLeftRef = useRef(0);
-
     const [videoPlaying, setVideoPlaying] = useState(false);
 
     /*
      * Keep the hero parallax animation on the compositor.
-     *
-     * requestAnimationFrame prevents the scroll event from repeatedly
-     * forcing style updates during the same frame.
      */
     useEffect(() => {
         let ticking = false;
@@ -102,66 +94,83 @@ export default function Home() {
     }, []);
 
     /*
-     * Automatic review slider.
+     * Continuously recycle review cards.
+     *
+     * The first card is moved to the end after it leaves
+     * the viewport. scrollLeft is compensated by the exact
+     * card width, so the visible content never jumps.
      */
     useEffect(() => {
+        const el = sliderRef.current;
+
+        if (!el || !el.children.length) return;
+
         const timer = window.setInterval(() => {
-            const el = sliderRef.current;
-
-            if (!el || !el.children.length) return;
-
             const firstCard = el.children[0];
+
+            if (!firstCard) return;
 
             const styles = window.getComputedStyle(el);
             const gap = parseFloat(styles.columnGap || styles.gap || "0");
 
             const cardWidth = firstCard.offsetWidth + gap;
 
-            const atEnd =
-                el.scrollLeft + el.clientWidth >=
-                el.scrollWidth - 2;
-
-            el.scrollTo({
-                left: atEnd ? 0 : el.scrollLeft + cardWidth,
+            el.scrollBy({
+                left: cardWidth,
                 behavior: "smooth",
             });
+
+            /*
+             * Wait for the smooth scroll to finish, then
+             * recycle the card that just left the viewport.
+             */
+            window.setTimeout(() => {
+                const currentEl = sliderRef.current;
+
+                if (!currentEl || !currentEl.children.length) return;
+
+                const currentFirst = currentEl.children[0];
+
+                if (!currentFirst) return;
+
+                const currentStyles = window.getComputedStyle(currentEl);
+                const currentGap = parseFloat(
+                    currentStyles.columnGap ||
+                    currentStyles.gap ||
+                    "0"
+                );
+
+                const currentCardWidth =
+                    currentFirst.offsetWidth + currentGap;
+
+                /*
+                 * Disable smooth scrolling for the instantaneous
+                 * DOM repositioning.
+                 */
+                currentEl.style.scrollBehavior = "auto";
+
+                /*
+                 * Move the first card to the end.
+                 */
+                currentEl.appendChild(currentFirst);
+
+                /*
+                 * Compensate for the removed card's width.
+                 * The viewport therefore remains visually unchanged.
+                 */
+                currentEl.scrollLeft -= currentCardWidth;
+
+                /*
+                 * Restore the original scroll behavior.
+                 */
+                currentEl.style.scrollBehavior = "";
+            }, 650);
         }, 4000);
 
         return () => {
             window.clearInterval(timer);
         };
     }, []);
-
-    const onMouseDown = (e) => {
-        const el = sliderRef.current;
-
-        if (!el) return;
-
-        isDraggingRef.current = true;
-        dragStartXRef.current = e.pageX - el.offsetLeft;
-        dragScrollLeftRef.current = el.scrollLeft;
-    };
-
-    const onMouseLeave = () => {
-        isDraggingRef.current = false;
-    };
-
-    const onMouseUp = () => {
-        isDraggingRef.current = false;
-    };
-
-    const onMouseMove = (e) => {
-        const el = sliderRef.current;
-
-        if (!el || !isDraggingRef.current) return;
-
-        e.preventDefault();
-
-        const x = e.pageX - el.offsetLeft;
-        const walk = x - dragStartXRef.current;
-
-        el.scrollLeft = dragScrollLeftRef.current - walk;
-    };
 
     return (
         <>
@@ -247,7 +256,7 @@ export default function Home() {
                         <iframe
                             className="videoSizing"
                             src="https://www.youtube.com/embed/lOTXXelNW30?autoplay=1"
-                            title="Crane Flooring hardwood floor refinishing video"
+                            title="Crane Flooring hardwood flooring refinishing video"
                             loading="lazy"
                             frameBorder="0"
                             allow="accelerometer; autoplay; encrypted-media; gyroscope; web-share; fullscreen"
@@ -276,7 +285,7 @@ export default function Home() {
                             onClick={() => window.scrollTo(0, 0)}
                             className="btn-custom btn-custom-fill"
                         >
-                           Set Appointment
+                            Set Appointment
                         </NavLink>
                     </div>
                 </div>
@@ -320,15 +329,11 @@ export default function Home() {
                 <div
                     ref={sliderRef}
                     className="review-slider"
-                    onMouseDown={onMouseDown}
-                    onMouseLeave={onMouseLeave}
-                    onMouseUp={onMouseUp}
-                    onMouseMove={onMouseMove}
                     aria-label="Customer reviews"
                 >
-                    {reviews.map((review) => (
+                    {reviews.map((review, index) => (
                         <article
-                            key={review.author}
+                            key={`${review.author}-${index}`}
                             className="review-card"
                         >
                             <p className="review-text">
@@ -363,7 +368,6 @@ export default function Home() {
                 className="contain2 borderBot space"
                 aria-labelledby="services-title"
             >
-
                 <div className="services-box spaceSmaller">
                     <p className="greyText">
                         What We Do
