@@ -931,6 +931,10 @@ textarea:focus-visible { outline-offset: 0px; }
     margin: 0 0 1rem;
 }
 
+.calendly-spinner {
+    display: none !important;
+}
+
 @media (max-width: 768px) {
     .contact-info-grid {
         grid-template-columns: 1fr;
