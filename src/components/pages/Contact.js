@@ -32,9 +32,9 @@ useEffect(() => {
                 </p>
 
                 <div className="contact-details">
-                    <a href="tel:+17572970270">
+                    <a href="tel:+17576341156">
                         <i className="fas fa-phone" aria-hidden="true"></i>
-                        (757) 297-0270
+                        (757) 634-1156
                     </a>
 
                     <span>

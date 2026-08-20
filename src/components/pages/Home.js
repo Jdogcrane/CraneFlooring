@@ -95,10 +95,6 @@ export default function Home() {
 
     /*
      * Continuously recycle review cards.
-     *
-     * The first card is moved to the end after it leaves
-     * the viewport. scrollLeft is compensated by the exact
-     * card width, so the visible content never jumps.
      */
     useEffect(() => {
         const el = sliderRef.current;
@@ -120,10 +116,6 @@ export default function Home() {
                 behavior: "smooth",
             });
 
-            /*
-             * Wait for the smooth scroll to finish, then
-             * recycle the card that just left the viewport.
-             */
             window.setTimeout(() => {
                 const currentEl = sliderRef.current;
 
@@ -143,26 +135,12 @@ export default function Home() {
                 const currentCardWidth =
                     currentFirst.offsetWidth + currentGap;
 
-                /*
-                 * Disable smooth scrolling for the instantaneous
-                 * DOM repositioning.
-                 */
                 currentEl.style.scrollBehavior = "auto";
 
-                /*
-                 * Move the first card to the end.
-                 */
                 currentEl.appendChild(currentFirst);
 
-                /*
-                 * Compensate for the removed card's width.
-                 * The viewport therefore remains visually unchanged.
-                 */
                 currentEl.scrollLeft -= currentCardWidth;
 
-                /*
-                 * Restore the original scroll behavior.
-                 */
                 currentEl.style.scrollBehavior = "";
             }, 650);
         }, 4000);
@@ -290,9 +268,7 @@ export default function Home() {
                     </div>
                 </section>
 
-                {/* =========================
-        REVIEWS
-    ========================== */}
+                {/* =========================REVIEWS========================== */}
                 <section
                     className="contain1 spaceSmaller"
                     aria-labelledby="reviews-title"
@@ -359,12 +335,9 @@ export default function Home() {
                         ))}
                     </div>
                 </section>
-
             </div>
 
-            {/* =========================
-                SERVICES
-            ========================== */}
+            {/* =========================SERVICES========================== */}
             <section
                 className="contain2 borderBot space"
                 aria-labelledby="services-title"
@@ -430,87 +403,89 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* =========================
-                ABOUT
-            ========================== */}
+            {/* =========================ABOUT========================== */}
             <section
                 className="contain1 space spaceDown"
                 aria-labelledby="about-title"
             >
-                <div className="about-header spacing2">
-                    <h2
-                        id="about-title"
-                        className="title"
-                    >
-                        About Crane Flooring
-                    </h2>
-
-                    <div className="about-socials">
-                        <a
-                            href="https://www.instagram.com/cranehardwoodflooring/?hl=en"
-                            rel="noopener noreferrer"
-                            target="_blank"
-                            aria-label="Crane Flooring on Instagram"
-                        >
-                            <i
-                                className="fab fa-instagram"
-                                aria-hidden="true"
-                            ></i>
-                        </a>
-
-                        <a
-                            href="https://www.facebook.com/craneflooring"
-                            rel="noopener noreferrer"
-                            target="_blank"
-                            aria-label="Crane Flooring on Facebook"
-                        >
-                            <i
-                                className="fab fa-facebook"
-                                aria-hidden="true"
-                            ></i>
-                        </a>
-                    </div>
-                </div>
-
                 <div className="about-box spaceSmaller">
-                    <p className="normalText">
-                        Crane Flooring was started in 2018 by Jeremiah Crane
-                        with the support of Steve Herritt and Caleb Winani,
-                        the owner and technical operator of the former
-                        flooring company &lsquo;Nu-Tech Hardwood Flooring.&rsquo;
-                    </p>
 
-                    <p
-                        className="normalText"
-                        style={{ marginTop: "1rem" }}
-                    >
-                        Since then Crane Flooring has provided hardwood
-                        flooring services to over 200+ customers. We service
-                        the greater Hampton Roads area &mdash; Virginia Beach,
-                        Norfolk, Chesapeake, Suffolk, Hampton, Newport News,
-                        and Isle of Wight County. We take pride in providing
-                        excellent flooring services at an affordable price.
-                    </p>
+                    <div className="about-header spacing2">
+                        <h2
+                            id="about-title"
+                            className="title"
+                        >
+                            About Crane Flooring
+                        </h2>
+
+                        <div className="about-socials">
+                            <a
+                                href="https://www.instagram.com/cranehardwoodflooring/?hl=en"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                                aria-label="Crane Flooring on Instagram"
+                            >
+                                <i
+                                    className="fab fa-instagram"
+                                    aria-hidden="true"
+                                ></i>
+                            </a>
+
+                            <a
+                                href="https://www.facebook.com/craneflooring"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                                aria-label="Crane Flooring on Facebook"
+                            >
+                                <i
+                                    className="fab fa-facebook"
+                                    aria-hidden="true"
+                                ></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div className="spaceSmaller">
+                        <p className="normalText">
+                            Crane Flooring was started in 2018 by Jeremiah Crane
+                            with the support of Steve Herritt and Caleb Winani,
+                            the owner and technical operator of the former
+                            flooring company &lsquo;Nu-Tech Hardwood Flooring.&rsquo;
+                        </p>
+
+                        <p
+                            className="normalText"
+                            style={{ marginTop: "1rem" }}
+                        >
+                            Since then Crane Flooring has provided hardwood
+                            flooring services to over 200+ customers. We service
+                            the greater Hampton Roads area &mdash; Virginia Beach,
+                            Norfolk, Chesapeake, Suffolk, Hampton, Newport News,
+                            and Isle of Wight County. We take pride in providing
+                            excellent flooring services at an affordable price.
+                        </p>
+                    </div>
+
+
                 </div>
+                    <div className="about-promise spaceSmaller">
+                        <p className="greyText">
+                            Our Promise
+                        </p>
 
-                <div className="about-promise spaceSmaller">
-                    <p className="greyText">
-                        Our Promise
-                    </p>
-
-                    <p
-                        className="normalText"
-                        style={{ marginTop: "0.75rem" }}
-                    >
-                        I&rsquo;ll only work with the best materials available
-                        and provide a 1 year guarantee on all labor. I never
-                        compromise quality for time and give my clients
-                        realistic schedules that accommodate their lives. I
-                        strive for honest customer service, so contracts are
-                        only paid in full when the finished work is to your
-                        complete satisfaction.
-                    </p>
-                </div>
+                        <p
+                            className="normalText"
+                            style={{ marginTop: "0.75rem" }}
+                        >
+                            I&rsquo;ll only work with the best materials available
+                            and provide a 1 year guarantee on all labor. I never
+                            compromise quality for time and give my clients
+                            realistic schedules that accommodate their lives. I
+                            strive for honest customer service, so contracts are
+                            only paid in full when the finished work is to your
+                            complete satisfaction.
+                        </p>
+                    </div>
             </section>
         </>
     );
