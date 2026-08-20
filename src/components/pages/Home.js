@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-import heroImage from "../images/hero.webp";
+import heroImage from "../images/hero2.webp";
 
 const reviews = [
     {
@@ -175,8 +175,8 @@ export default function Home() {
     return (
         <>
             {/* =========================
-                HERO
-            ========================== */}
+    HERO
+========================== */}
             <section
                 id="parallax-1"
                 className="center"
@@ -212,154 +212,161 @@ export default function Home() {
             </section>
 
             {/* =========================
-                VIDEO + CTA
-            ========================== */}
-            <div className="hero-gap"></div>
+    HERO CONTENT BACKGROUND
+========================== */}
+            <div className="hero-content-background">
 
-            <section
-                className="video-cta-card contain1"
-                aria-labelledby="video-section-title"
-            >
-                <h2
-                    id="video-section-title"
-                    className="sr-only"
+                {/* =========================
+        VIDEO + CTA
+    ========================== */}
+                <div className="hero-gap"></div>
+
+                <section
+                    className="video-cta-card contain1"
+                    aria-labelledby="video-section-title"
                 >
-                    Crane Flooring Services
-                </h2>
+                    <h2
+                        id="video-section-title"
+                        className="sr-only"
+                    >
+                        Crane Flooring Services
+                    </h2>
 
-                <div className="video-wrapper">
-                    {!videoPlaying ? (
-                        <button
-                            type="button"
-                            className="video-placeholder"
-                            onClick={() => setVideoPlaying(true)}
-                            aria-label="Play Crane Flooring hardwood flooring video"
-                        >
-                            <img
+                    <div className="video-wrapper">
+                        {!videoPlaying ? (
+                            <button
+                                type="button"
+                                className="video-placeholder"
+                                onClick={() => setVideoPlaying(true)}
+                                aria-label="Play Crane Flooring hardwood flooring video"
+                            >
+                                <img
+                                    className="videoSizing"
+                                    src="https://img.youtube.com/vi/lOTXXelNW30/maxresdefault.jpg"
+                                    alt="Crane Flooring hardwood floor refinishing project"
+                                    width="1280"
+                                    height="720"
+                                    loading="lazy"
+                                    decoding="async"
+                                />
+
+                                <span
+                                    className="video-play-button"
+                                    aria-hidden="true"
+                                >
+                                    &#9654;
+                                </span>
+                            </button>
+                        ) : (
+                            <iframe
                                 className="videoSizing"
-                                src="https://img.youtube.com/vi/lOTXXelNW30/maxresdefault.jpg"
-                                alt="Crane Flooring hardwood floor refinishing project"
-                                width="1280"
-                                height="720"
+                                src="https://www.youtube.com/embed/lOTXXelNW30?autoplay=1"
+                                title="Crane Flooring hardwood flooring refinishing video"
                                 loading="lazy"
-                                decoding="async"
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; web-share; fullscreen"
+                                allowFullScreen
+                                referrerPolicy="strict-origin-when-cross-origin"
                             />
+                        )}
+                    </div>
+
+                    <div className="cta-strip">
+                        <p className="cta-label">
+                            Ready to get started?
+                        </p>
+
+                        <div className="cta-buttons">
+                            <NavLink
+                                to="/gallery"
+                                onClick={() => window.scrollTo(0, 0)}
+                                className="btn-custom"
+                            >
+                                View Our Work
+                            </NavLink>
+
+                            <NavLink
+                                to="/contact"
+                                onClick={() => window.scrollTo(0, 0)}
+                                className="btn-custom btn-custom-fill"
+                            >
+                                Set Appointment
+                            </NavLink>
+                        </div>
+                    </div>
+                </section>
+
+                {/* =========================
+        REVIEWS
+    ========================== */}
+                <section
+                    className="contain1 spaceSmaller"
+                    aria-labelledby="reviews-title"
+                >
+                    <div className="center">
+                        <a
+                            className="google-badge"
+                            rel="noopener noreferrer"
+                            href="https://www.google.com/search?q=crane+hardwood+flooring#lrd=0x89baa75c066f7f01:0x8ca1022771311150,1"
+                            target="_blank"
+                            aria-label="View Crane Flooring reviews on Google"
+                        >
+                            <i
+                                className="fab fa-google"
+                                aria-hidden="true"
+                            ></i>
+
+                            <span>5.0</span>
 
                             <span
-                                className="video-play-button"
-                                aria-hidden="true"
-                            >
-                                &#9654;
-                            </span>
-                        </button>
-                    ) : (
-                        <iframe
-                            className="videoSizing"
-                            src="https://www.youtube.com/embed/lOTXXelNW30?autoplay=1"
-                            title="Crane Flooring hardwood flooring refinishing video"
-                            loading="lazy"
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; web-share; fullscreen"
-                            allowFullScreen
-                            referrerPolicy="strict-origin-when-cross-origin"
-                        />
-                    )}
-                </div>
-
-                <div className="cta-strip">
-                    <p className="cta-label">
-                        Ready to get started?
-                    </p>
-
-                    <div className="cta-buttons">
-                        <NavLink
-                            to="/gallery"
-                            onClick={() => window.scrollTo(0, 0)}
-                            className="btn-custom"
-                        >
-                            View Our Work
-                        </NavLink>
-
-                        <NavLink
-                            to="/contact"
-                            onClick={() => window.scrollTo(0, 0)}
-                            className="btn-custom btn-custom-fill"
-                        >
-                            Set Appointment
-                        </NavLink>
-                    </div>
-                </div>
-            </section>
-
-            {/* =========================
-                REVIEWS
-            ========================== */}
-            <section
-                className="contain1 spaceSmaller"
-                aria-labelledby="reviews-title"
-            >
-                <div className="center">
-                    <a
-                        className="google-badge"
-                        rel="noopener noreferrer"
-                        href="https://www.google.com/search?q=crane+hardwood+flooring#lrd=0x89baa75c066f7f01:0x8ca1022771311150,1"
-                        target="_blank"
-                        aria-label="View Crane Flooring reviews on Google"
-                    >
-                        <i
-                            className="fab fa-google"
-                            aria-hidden="true"
-                        ></i>
-
-                        <span>5.0</span>
-
-                        <span
-                            className="stars"
-                            aria-label="5 out of 5 stars"
-                        >
-                            &#9733;&#9733;&#9733;&#9733;&#9733;
-                        </span>
-
-                        <span className="badge-sub">
-                            50+ Google Reviews
-                        </span>
-                    </a>
-                </div>
-
-                <div
-                    ref={sliderRef}
-                    className="review-slider"
-                    aria-label="Customer reviews"
-                >
-                    {reviews.map((review, index) => (
-                        <article
-                            key={`${review.author}-${index}`}
-                            className="review-card"
-                        >
-                            <p className="review-text">
-                                {review.text}
-                            </p>
-
-                            <p className="review-author">
-                                &mdash; {review.author}
-                            </p>
-
-                            <div
-                                className="review-stars"
+                                className="stars"
                                 aria-label="5 out of 5 stars"
                             >
-                                {[...Array(5)].map((_, index) => (
-                                    <i
-                                        key={index}
-                                        className="fas fa-star"
-                                        aria-hidden="true"
-                                    ></i>
-                                ))}
-                            </div>
-                        </article>
-                    ))}
-                </div>
-            </section>
+                                &#9733;&#9733;&#9733;&#9733;&#9733;
+                            </span>
+
+                            <span className="badge-sub">
+                                50+ Google Reviews
+                            </span>
+                        </a>
+                    </div>
+
+                    <div
+                        ref={sliderRef}
+                        className="review-slider"
+                        aria-label="Customer reviews"
+                    >
+                        {reviews.map((review, index) => (
+                            <article
+                                key={`${review.author}-${index}`}
+                                className="review-card"
+                            >
+                                <p className="review-text">
+                                    {review.text}
+                                </p>
+
+                                <p className="review-author">
+                                    &mdash; {review.author}
+                                </p>
+
+                                <div
+                                    className="review-stars"
+                                    aria-label="5 out of 5 stars"
+                                >
+                                    {[...Array(5)].map((_, index) => (
+                                        <i
+                                            key={index}
+                                            className="fas fa-star"
+                                            aria-hidden="true"
+                                        ></i>
+                                    ))}
+                                </div>
+                            </article>
+                        ))}
+                    </div>
+                </section>
+
+            </div>
 
             {/* =========================
                 SERVICES

@@ -44,6 +44,12 @@ useEffect(() => {
                 </div>
             </section>
 
+
+            <section className="contact-scheduler">
+                <h2>Schedule an Estimate</h2>
+
+                <div id="calendly-inline" />
+            </section>
             <section className="contact-info-grid">
 
                 <article className="contact-info-card">
@@ -81,12 +87,6 @@ useEffect(() => {
                     </div>
                 </article>
 
-            </section>
-
-            <section className="contact-scheduler">
-                <h2>Schedule an Estimate</h2>
-
-                <div id="calendly-inline" />
             </section>
 
         </div>

@@ -1,6 +1,6 @@
 
 :root {
-    --primary-theme: white;
+    --primary-theme: #f9fcff;
     --secondary-theme: -webkit-linear-gradient(left, #00000079, #300e3577);
     --animate-delay: 0.2s;
     --text-theme: #ff9800;
@@ -13,7 +13,7 @@
 }
 
 body {
-    background-color: #f9fcff;
+    background-color: var(--primary-theme);
     text-align: unset;
     scroll-behavior: smooth;
     transition: 200ms;
@@ -26,20 +26,31 @@ body {
 html { overflow-x: hidden; }
 #parallax-1 {
     position: relative;
-    height: clamp(1000px, 5vw, 750px);
-    overflow: hidden;
-}
-
-@media only screen and (max-width: 994px) {
-    #parallax-1 {
-        height: clamp(300px, 5vw, 750px);
-    }
+    height: 750px;
+    overflow: visible;
+    background: var(--primary-theme);
 }
 
 .hero-image-container {
     position: absolute;
-    inset: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1600px;
     overflow: hidden;
+    z-index: 0;
+}
+
+#parallax-1 ~ * {
+    position: relative;
+    z-index: 2;
+    background-color: var(--primary-theme);
+}
+
+.hero-content-background {
+    position: relative;
+    z-index: 2;
+    background-color: var(--primary-theme);
 }
 
 .hero-img {
@@ -65,11 +76,57 @@ html { overflow-x: hidden; }
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient( to bottom, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.55) 55%, rgba(0,0,0,0) 100% );
+    z-index: 1;
+    background: linear-gradient( to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.45) 55%, rgba(0,0,0,0) 100% );
     display: flex;
     align-items: flex-start;
     justify-content: center;
     padding-top: 18%;
+}
+
+@media only screen and (max-width: 994px) {
+    #parallax-1 {
+        height: 1600px;
+        overflow: hidden;
+    }
+
+    .hero-image-container {
+        height: 300px;
+    }
+
+    .hero-img {
+        width: 100%;
+        height: 200%;
+        top: auto;
+        bottom: -58%;
+        object-fit: cover;
+        object-position: center bottom;
+    }
+}
+
+
+
+@media only screen and (max-width: 994px) {
+    #parallax-1 {
+        height: 300px;
+    }
+
+    .hero-image-container {
+        height: 300px;
+    }
+
+    #parallax-1::after {
+        display: none;
+    }
+
+    .hero-img {
+        width: 100%;
+        height: 200%;
+        top: auto;
+        bottom: -115%;
+        object-fit: cover;
+        object-position: center bottom;
+    }
 }
 
 .sr-only {
@@ -252,6 +309,7 @@ ul.list { list-style-type: disc; margin-bottom: 0.5rem; }
     border-radius: 10px;
     box-shadow: 0 2px 12px rgba(0,0,0,0.08);
     overflow: hidden;
+
 }
 
 .hero-gap {
@@ -853,14 +911,16 @@ textarea:focus-visible { outline-offset: 0px; }
 .contact-scheduler {
     width: 100%;
     max-width: 700px;
+    min-height: 500px;
 }
 
-    .contact-scheduler h2 {
-        text-align: center;
-        font-family: Belwe;
-        font-size: 1.4rem;
-        margin: 0 0 1rem;
-    }
+
+.contact-scheduler h2 {
+    text-align: center;
+    font-family: Belwe;
+    font-size: 1.4rem;
+    margin: 0 0 1rem;
+}
 
 @media (max-width: 768px) {
     .contact-info-grid {
