@@ -26,7 +26,7 @@ body {
 html { overflow-x: hidden; }
 #parallax-1 {
     position: relative;
-    height: 750px;
+    height: 100vh;
     overflow: visible;
     background: var(--primary-theme);
 }
@@ -36,7 +36,7 @@ html { overflow-x: hidden; }
     top: 0;
     left: 0;
     right: 0;
-    height: 1600px;
+    height: 1900px;
     overflow: hidden;
     z-index: 0;
 }
@@ -64,6 +64,7 @@ html { overflow-x: hidden; }
 }
 
 .hero-text {
+    --hero-size: clamp(3rem, 6vw, 6rem);
     position: absolute;
     top: clamp(50px, 10vw, 200px);
     left: 50%;
@@ -72,6 +73,14 @@ html { overflow-x: hidden; }
     max-width: 90%;
     text-align: center;
 }
+
+    .hero-text h1 {
+        font-size: var(--hero-size);
+    }
+
+    .hero-text p {
+        font-size: calc(var(--hero-size) * 0.5);
+    }
 
 .hero-overlay {
     position: absolute;

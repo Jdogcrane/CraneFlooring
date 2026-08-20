@@ -174,9 +174,7 @@ export default function Home() {
 
     return (
         <>
-            {/* =========================
-    HERO
-========================== */}
+            {/* ========================HERO========================== */}
             <section
                 id="parallax-1"
                 className="center"
@@ -211,14 +209,10 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* =========================
-    HERO CONTENT BACKGROUND
-========================== */}
+            {/* ========================HERO CONTENT BACKGROUND========================== */}
             <div className="hero-content-background">
 
-                {/* =========================
-        VIDEO + CTA
-    ========================== */}
+                {/* =========================VIDEO + CTA========================== */}
                 <div className="hero-gap"></div>
 
                 <section
